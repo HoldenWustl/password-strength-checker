@@ -1,1 +1,24 @@
-
+p = input("Enter a password: ")
+level = 0
+# Checking if the password is at least 8 characters long
+if len(p) >= 8:
+  level += 1
+# Checking if the password contains at least one uppercase letter
+if any(char.isupper() for char in p):
+  level += 1
+# Checking if the password contains at least one lowercase letter
+if any(char.islower() for char in p):
+  level += 1
+# Checking if the password contains at least one digit
+if any(char.isdigit() for char in p):
+  level += 1
+# Checking if the password contains at least one special character
+if any(not char.isalnum() for char in p):
+  level += 1
+# Printing the password strength level
+if level == 5: print("Password is very strong")
+if level == 4: print("Password is strong")
+if level ==3: print("Password is moderate")
+if level == 2: print("Password is weak")
+if level == 1: print("Password is very weak")
+if level == 0: print("Password is invalid")
