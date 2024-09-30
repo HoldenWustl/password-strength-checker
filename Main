@@ -18,7 +18,7 @@ if any(not char.isalnum() for char in p):
 # Printing the password strength level
 if level == 5: print("Password is very strong")
 if level == 4: print("Password is strong")
-if level ==3: print("Password is moderate")
+if level == 3: print("Password is moderate")
 if level == 2: print("Password is weak")
 if level == 1: print("Password is very weak")
 if level == 0: print("Password is invalid")
